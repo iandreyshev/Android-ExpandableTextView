@@ -1,10 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
 
 def fullVersion = '1.0.5'
 
-group = 'at.blogc'
 version = fullVersion
 
 android {
@@ -89,37 +87,6 @@ install {
                     name 'Cliff Ophalvens'
                     email 'cliff.ophalvens@gmail.com'
                 }
-            }
-        }
-    }
-}
-
-bintray {
-    user = "${bintray_user}"
-    key = "${bintray_apikey}"
-    configurations = ['archives']
-
-    dryRun = false
-
-    pkg {
-        repo = 'maven'
-        name = 'android-expandabletextview'
-        userOrg = "blogcat"
-        licenses = ['Apache-2.0']
-        websiteUrl = 'https://github.com/Blogcat/Android-ExpandableTextView'
-        issueTrackerUrl = 'https://github.com/Blogcat/Android-ExpandableTextView/issues'
-        vcsUrl = 'https://github.com/Blogcat/Android-ExpandableTextView.git'
-        githubRepo = 'Blogcat/Android-ExpandableTextView'
-        githubReleaseNotesFile = 'CHANGELOG.md'
-
-        version {
-            name = fullVersion
-            released  = new Date()
-            vcsTag = fullVersion
-
-            gpg {
-                sign = true
-                passphrase = "${bintray_gpg_password}"
             }
         }
     }
