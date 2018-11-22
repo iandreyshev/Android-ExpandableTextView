@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="at.blogc.android.activities.ExpandLinkActivity">
+
+    <at.blogc.android.views.ExpandableTextView
+        android:id="@+id/tvExpandableText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="Can you imagine how much code we need to write and how many scenario we have to handle. I am not going in details of it as this article is about the easiest solution rather than demonstrate interface implementation. You can find the implementation here."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvExpandLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="читать больше"
+        android:textColor="#44f"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableTextView2" />
+
+</LinearLayout>
